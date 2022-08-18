@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Household Savings Calculator</title>
+    <link href="Resources/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Monthly Savings Calculator</h1>
+    </header>
+    <div id="form">
+    <form>
+        <div>
+            <label>Income</label>
+            <input type="number" id="income" name="income"> 
+        </div>
+        <div>
+            <label>Housing</label>
+            <input type="number" id="housing" name="housing" class="expense" default="0"><br>
+            <label>Utilities</label>
+            <input type="number" id="utilities" class="expense" name="utilities" default="0"><br>
+            <label>Phone</label>
+            <input type="number" id="phone" class="expense" name="phone" default="0"><br>
+            <label>Internet</label>
+            <input type="number" id="internet" class="expense" name="internet" default="0"><br>
+            <label>Cable</label>
+            <input type="number" id="cable" class="expense" name="cable" default="0"><br>
+        </div>
+        <div>
+            <label>Groceries</label>
+            <input type="number" id="groceries" class="expense" name="groceries" default="0"><br>
+            <label>Restaurants</label>
+            <input type="number" id="restaurants" class="expense" name="restaurants" default="0"><br>
+        </div>
+        <div>
+            <label for="car">Car Note</label>
+            <input type="number" id="car" class="expense" name="car" default="0"><br>
+            <label>Gas</label>
+            <input type="number" id="gas" class="expense" name="gas" default="0"><br>
+        </div>
+        <div id="misc">
+            <label>Entertainment</label>
+            <input type="number" id="entertainment" class="expense" name="entertainment" default="0"><br>
+            <label>Clothes</label>
+            <input type="number" id="clothes" class="expense" name="clothes" default="0"><br>
+        </div>
+    </form>
+    </div>
+    <div id="button">
+        <h3>Calculate</h3>
+    </div>
+    <p id="result"></p>
+</body>
+
+<script src="Resources/scalc.js"></script>
+
+</html>
