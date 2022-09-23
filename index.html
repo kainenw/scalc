@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -19,6 +20,8 @@
         <div>
             <label>Income</label>
             <input type="number" id="income" name="income"> 
+            <label>Medical</label>
+            <input type="number" id="medical" name="medical" class="expense" default="0">
         </div>
         <div>
             <label>Housing</label>
@@ -58,6 +61,6 @@
     <p id="result"></p>
 </body>
 
-<script src="Resources/scalc.js"></script>
+<script src="Resources/scalc.js" type="module"></script>
 
 </html>
