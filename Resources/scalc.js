@@ -1,5 +1,8 @@
-import {inc} from "./income.js";
-import {exp} from "./expenses.js";
+import { inc } from "./income.js";
+import { exp } from "./expenses.js";
+
+
+
 
 const print = () => {
     let result = $('#result');
@@ -16,4 +19,4 @@ const print = () => {
     }
 }
 
-$('#button').click(print);
+$('#button').on('click', print);

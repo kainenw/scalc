@@ -98,6 +98,10 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+.income,
+.weeklyHours{
+    display: none;
+}
 
 #button h3 {
     font-size: 2em;

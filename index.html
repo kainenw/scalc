@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Household Savings Calculator</title>
+    <title>Savings Calculator</title>
     <link href="Resources/styles.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -13,15 +13,30 @@
 </head>
 <body>
     <header>
-        <h1>Monthly Savings Calculator</h1>
+        <h1>Savings Calculator</h1>
     </header>
     <div id="form">
     <form>
+        <p>Select income type:</p>
         <div>
-            <label>Income</label>
-            <input type="number" id="income" name="income"> 
-            <label>Medical</label>
-            <input type="number" id="medical" name="medical" class="expense" default="0">
+            <label for="hourly">Hourly</label>
+            <input type="radio" id="hourly" name="pay-type" value="hourly">
+            <label for="salary">Salary</label>
+            <input type="radio" id="salary" name="pay-type" value="salary">
+        </div>
+
+        <div class="income">
+            <label class="income" id="income">Pay Rate</label>
+            <input type="number" class="income" id="pay-rate" name="income"> 
+            <label class="weeklyHours">Hours/Week</label>
+            <input type="number" id="weeklyHours" class="weeklyHours" name="weeklyHours">
+        </div>
+        <p>Select pay period:</p>
+        <div>
+            <label for="weekly">Weekly</label>
+            <input type="radio" id="weekly" name="pay-period" value="1 week">
+            <label for="bi-weekly">Bi-weekly</label>
+            <input type="radio" id="bi-weekly" name="pay-period" value="2 weeks">
         </div>
         <div>
             <label>Housing</label>
@@ -34,6 +49,8 @@
             <input type="number" id="internet" class="expense" name="internet" default="0"><br>
             <label>Cable</label>
             <input type="number" id="cable" class="expense" name="cable" default="0"><br>
+            <label>Medical</label>
+            <input type="number" id="medical" name="medical" class="expense" default="0">
         </div>
         <div>
             <label>Groceries</label>
