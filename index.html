@@ -34,41 +34,42 @@
         <p>Select pay period:</p>
         <div>
             <label for="weekly">Weekly</label>
-            <input type="radio" id="weekly" name="pay-period" value="1 week">
+            <input type="radio" id="weekly" class="pay-period" name="pay-period" value="1 week">
             <label for="bi-weekly">Bi-weekly</label>
-            <input type="radio" id="bi-weekly" name="pay-period" value="2 weeks">
+            <input type="radio" id="bi-weekly" class="pay-period" name="pay-period" value="2 weeks">
         </div>
+        <h3>Expenses</h3>
+            <p>Montly</p>
         <div>
             <label>Housing</label>
-            <input type="number" id="housing" name="housing" class="expense" default="0"><br>
+            <input type="number" id="housing" name="housing" class="expense monthly" default="0"><br>
             <label>Utilities</label>
-            <input type="number" id="utilities" class="expense" name="utilities" default="0"><br>
+            <input type="number" id="utilities" class="expense monthly" name="utilities" default="0"><br>
             <label>Phone</label>
-            <input type="number" id="phone" class="expense" name="phone" default="0"><br>
+            <input type="number" id="phone" class="expense monthly" name="phone" default="0"><br>
             <label>Internet</label>
-            <input type="number" id="internet" class="expense" name="internet" default="0"><br>
+            <input type="number" id="internet" class="expense monthly" name="internet" default="0"><br>
             <label>Cable</label>
-            <input type="number" id="cable" class="expense" name="cable" default="0"><br>
+            <input type="number" id="cable" class="expense monthly" name="cable" default="0"><br>
             <label>Medical</label>
-            <input type="number" id="medical" name="medical" class="expense" default="0">
+            <input type="number" id="medical" name="monthly-medical" class="expense monthly" default="0">
+            <label for="car">Car Note</label>
+            <input type="number" id="car" class="monthly-expense" name="car" default="0"><br>
         </div>
+        <p>Weekly</p>
         <div>
             <label>Groceries</label>
-            <input type="number" id="groceries" class="expense" name="groceries" default="0"><br>
+            <input type="number" id="groceries" class="expense weekly" name="groceries" default="1"><br>
             <label>Restaurants</label>
-            <input type="number" id="restaurants" class="expense" name="restaurants" default="0"><br>
-        </div>
-        <div>
-            <label for="car">Car Note</label>
-            <input type="number" id="car" class="expense" name="car" default="0"><br>
-            <label>Gas</label>
-            <input type="number" id="gas" class="expense" name="gas" default="0"><br>
+            <input type="number" id="restaurants" class="expense weekly" name="restaurants" default="1"><br>
         </div>
         <div id="misc">
+            <label>Gas</label>
+            <input type="number" id="gas" class="expense weekly" name="gas" default="0"><br>
             <label>Entertainment</label>
-            <input type="number" id="entertainment" class="expense" name="entertainment" default="0"><br>
+            <input type="number" id="entertainment" class="expense weekly" name="entertainment" default="0"><br>
             <label>Clothes</label>
-            <input type="number" id="clothes" class="expense" name="clothes" default="0"><br>
+            <input type="number" id="clothes" class="expense weekly" name="clothes" default="0"><br>
         </div>
     </form>
     </div>
