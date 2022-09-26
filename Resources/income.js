@@ -1,48 +1,33 @@
-let payType;
-let weeklyHours = null;
-
-function type(){
-    payType = this.value;
-    let payLabel = $('#incomeLabel')
-    if(this.value === 'hourly'){
-        payLabel.html('Hourly Pay');
-        $('.income').css('display', 'block');
-        $('.weeklyHours').css('display', 'block');
-    } else {
-        payLabel.html('Salary');
-        $('.income').css('display', 'block');
-        $('.weeklyHours').css('display', 'none');
-    }
-    
-    console.log(payType);
+let type;
+function payType(){
+    type = this.value[0];
+    console.log(type)
+    let display = type === 'S' ? 'none' : 'block'
+    $('.weeklyHours').css('display', display);
+    $('#incomeLabel').html(this.value);
+    $('.income').css('display', 'block');
 }
 
-let payPeriod;
-
-function period(){
-    payPeriod = this.value;
-    console.log(payPeriod);
+let period;
+function payPeriod(){
+    period = this.value[0];
+    console.log(period)
 }
 
-$("input[name='pay-type']").on('click', type);
-$("input[name='pay-period']").on('click', period);
+$("input[name='pay-type']").on('click', payType);
+$("input[name='pay-period']").on('click', payPeriod);
 
-export const inc = () => {
-    let rate = $("#pay-rate").val();
-    console.log(rate);
-
-    let income = 0;
-        if(payType === 'hourly'){
-            weeklyHours = $("#weeklyHours").val();
-
-            income = weeklyHours * rate * payPeriod[0];
-        }
-        if(payType === 'salary'){
-            const paychecks = 52 / payPeriod[0];
-            income = rate / paychecks;
-            console.log(rate);
-        }
-
-
+const inc = (tType = null, tRate = null, tHours = null, tPeriod = null) => {
+    const rate = tRate || $("#pay-rate").val();
+    const hours = tHours || $("#weeklyHours").val();
+    if(tPeriod){period = tPeriod};
+    if(tType){type = tType};
+    const yearlyPaychecks = 52 / period;
+    income = type === 'H' ? rate * hours * period : rate / yearlyPaychecks;
+    console.log(rate + hours + period + type + yearlyPaychecks);
     return income;
 }
+
+export { inc }
+
+//module.exports = { inc }
