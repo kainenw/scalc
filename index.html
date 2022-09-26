@@ -16,7 +16,7 @@
         <h1>Savings Calculator</h1>
     </header>
     <div id="form">
-    <form>
+    <form >
         <p>Select income type:</p>
         <div>
             <label for="hourly">Hourly</label>
@@ -74,9 +74,9 @@
     </form>
     </div>
     <div id="button">
-        <h3>Calculate</h3>
+        <button type="submit" onclick="event.preventDefault()"><h3>Calculate</h3></button>
     </div>
-    <p id="result"></p>
+    <p class="results">Each pay period, your savings would change by: <span class="results" id='result'></span></p>
 </body>
 
 <script src="Resources/scalc.js" type="module"></script>

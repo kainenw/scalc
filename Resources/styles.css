@@ -103,7 +103,7 @@ input::-webkit-inner-spin-button {
     display: none;
 }
 
-#button h3 {
+button {
     font-size: 2em;
     margin-left: 38%;
     margin-right: 38%;
@@ -120,7 +120,7 @@ input::-webkit-inner-spin-button {
     transition: all 50ms linear;
 }
 
-#button h3:hover {
+button:hover {
 	transition: all 50ms linear;
 	box-shadow: 7px 15px;
 	background-color: hsl(203,92%,90%);
@@ -128,7 +128,7 @@ input::-webkit-inner-spin-button {
     transform: translate(3px, 5px);
 }
 
-#button h3:active {
+button:active {
     box-shadow: none;
     background-color: hsl(203,92%,80%);
     border: 1px solid gray;
@@ -139,6 +139,10 @@ input::-webkit-inner-spin-button {
 #result {
     font-size: 1.5rem;
     margin: 2rem;
+}
+
+.results {
+    display: none;
 }
 
 #result span {

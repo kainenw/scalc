@@ -2,40 +2,29 @@ const sum = (num1, num2) => {
     return num1 + num2;
 }
 
-const weekly = (tInputs = null) => {
-    let inputs = tInputs || $(".weekly");
-    let expenses = [];
+const parse = (inputs) => {
+    let exp = [];
     for (let i = 0; i < inputs.length; i++) {
         let value = inputs[i].valueAsNumber;
-        value && expenses.push(value);
+        value && exp.push(value);
     }
-    console.log(inputs)
-    return !expenses.length ? 0 : expenses.reduce(sum);
+    return !exp.length ? 0 : exp.reduce(sum);
 }
 
-const monthly = (tInputs = null) => {
-    let inputs = tInputs || $(".monthly");
-    let expenses = [];
-    for (let i = 0; i < inputs.length; i++) {
-        let value = inputs[i].valueAsNumber;
-        value && expenses.push(value);
+const obj = (tWeekly = null, tMonthly = null) => {
+    let exp = {
+        weekly: tWeekly || parse($(".weekly")),
+        monthly: tMonthly || parse($(".monthly")),
     }
-    return !expenses.length ? 0 : expenses.reduce(sum);
+    return exp;
 }
 
-export function exp(tPerWeek = null, tPerMonth = null, tPeriod = null) {
-    let perWeek = tPerWeek || weekly();
-    console.log(perWeek)
-    let perMonth = tPerMonth || monthly();
-    console.log(perMonth)
-    let payPeriod = tPeriod || $("input[name='pay-period']:checked").val()[0];
-    console.log(payPeriod)
-    let perYear = perWeek * 52 + perMonth * 12;
-    console.log(perYear)
-    let yearlyPayPeriods = 52 / payPeriod;
-    console.log(yearlyPayPeriods)
-    let expPerPayPeriod = perYear / yearlyPayPeriods;
-    console.log(expPerPayPeriod)
-    return expPerPayPeriod;
+export function exp(tWeekly = null, tMonthly = null, tPeriod = null) {
+    let exp = !tWeekly ? obj() : {weekly: tWeekly, monthly: tMonthly}
+    let period = tPeriod || $("input[name='pay-period']:checked").val()[0];
+    let yearlyTotal = exp.weekly * 52 + exp.monthly * 12;
+    let yearlyPeriods = 52 / period;
+    let result = yearlyTotal / yearlyPeriods;
+    return result;
 }
 
