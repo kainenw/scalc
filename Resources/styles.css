@@ -45,7 +45,7 @@ form div {
 }
 
 #form {
-    /*min-width: 600px;*/
+    min-width: 600px;
 }
 
 form label {
@@ -141,7 +141,7 @@ button:active {
     margin: 2rem;
 }
 
-.results {
+#results {
     display: none;
 }
 

@@ -61,7 +61,7 @@ const $ = jQuery = require('jquery')(window);
         })
     })
    /* describe('results', () => {
-        it('results for weekly', () => {
+        it('test object', () => {
             period = '1 week';
             result = response.length;
             expectedResult = 52;

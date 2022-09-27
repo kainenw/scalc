@@ -17,6 +17,15 @@
     </header>
     <div id="form">
     <form >
+        <p>Enter you savings goals:</p>
+        <div class="goals">
+            <label class="goals" id="income">Rainy Day Fund</label>
+            <input type="number" class="goals" id="trips" name="trips"> 
+            <label class="goals">Trips</label>
+            <input type="number" id="trips" class="goals" name="trips">
+            <label class="goals">Retirement</label>
+            <input type="number" id="retirement" class="goals" name="retirement">
+        </div>
         <p>Select income type:</p>
         <div>
             <label for="hourly">Hourly</label>
@@ -76,7 +85,21 @@
     <div id="button">
         <button type="submit" onclick="event.preventDefault()"><h3>Calculate</h3></button>
     </div>
-    <p class="results">Each pay period, your savings would change by: <span class="results" id='result'></span></p>
+    <div id="results">
+        <p class="results">Each pay period, your savings would change by: <span class="results" id='savable'></span></p>
+        <p class="results">You would reach your savings goals after <span class="results" id='weeksAway'></span></p>
+        <table>
+            <th>Savings over one year</th>
+            <tr>
+                <td>Weeks from today</td>
+                <td>Income</td>
+                <td>Expenses</td>
+                <td>Saving</td>
+                <td>Savings so far</td>
+                <td>Distance from goal</td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 <script src="Resources/scalc.js" type="module"></script>

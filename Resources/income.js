@@ -7,7 +7,7 @@ function payType(){
     $('.income').css('display', 'block');
 }
 
-let period;
+export let period;
 function payPeriod(){
     period = this.value[0];
 }
