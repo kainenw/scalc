@@ -1,11 +1,15 @@
 *{
     background-color: skyblue;
-    color: darkslategray;
+    
     font-size: 18px;
     font: arial;
     text-align: center;
     font-family: 'EB Garamond', serif;
     margin: 0;
+}
+
+body {
+  color: darkslategray;
 }
 
 header {
@@ -89,6 +93,10 @@ input:focus {
     margin-right: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+#button h3 {
+  background-color: transparent;
 }
 
 /*removing the arrows*/
