@@ -85,19 +85,23 @@
     <div id="button">
         <button type="submit" onclick="event.preventDefault()"><h3>Calculate</h3></button>
     </div>
-    <div id="results">
+    <div id="results" class="table-title">
         <p class="results">Each pay period, your savings would change by: <span class="results" id='savable'></span></p>
         <p class="results">You would reach your savings goals after <span class="results" id='weeksAway'></span></p>
-        <table>
-            <th>Savings over one year</th>
-            <tr>
+        <table class="table-head">
+            <thead>Savings over one year
+              <tr>
                 <td>Weeks from today</td>
                 <td>Income</td>
                 <td>Expenses</td>
                 <td>Saving</td>
                 <td>Savings so far</td>
                 <td>Distance from goal</td>
-            </tr>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
         </table>
     </div>
 </body>

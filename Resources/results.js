@@ -4,7 +4,7 @@ import { exp, parse } from "./expenses.js";
 function tableCreate(income, expenses, total) {
     const body = document.body;
     const goal = parse($(".goals"))
-    let tbl = document.querySelector('table');
+    let tbody = document.querySelector('tbody');
     let cumulativeSavings = 0;
     const rows = 52 / period;
     //const cols = 6;
@@ -31,13 +31,19 @@ function tableCreate(income, expenses, total) {
       td4.appendChild(document.createTextNode(saving));
       td5.appendChild(document.createTextNode(totalSavings));
       td6.appendChild(document.createTextNode(distance));
+      td1.classList.add("text-left");
+      td2.classList.add("text-left");
+      td3.classList.add("text-left");
+      td4.classList.add("text-left");
+      td5.classList.add("text-left");
+      td6.classList.add("text-left");
       tr.appendChild(td1);
       tr.appendChild(td2);
       tr.appendChild(td3);
       tr.appendChild(td4);
       tr.appendChild(td5);
       tr.appendChild(td6);
-      tbl.appendChild(tr);
+      tbody.appendChild(tr);
       cumulativeSavings += total;
   }
 }
